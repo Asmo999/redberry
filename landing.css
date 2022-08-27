@@ -1,0 +1,53 @@
+.Landing-Photo {
+    position: absolute;
+    top: 182px;
+    left: 589px;
+}
+.Landing-Logo {
+    position: absolute;
+    left: calc(50% - 112px/2);
+    top: 79px;
+}
+.Add-Button {
+    display: flex;
+    position: absolute;
+    background: #62A1EB;
+    width: 387px;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    left: calc(50% - 387px/2 - 0.5px);
+    top: 730px;
+    border-radius: 8px;
+}
+.Add-But-Txt {
+    margin: auto;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;    
+}
+.List-Button {
+    display: flex;
+    position: absolute;
+    background: #62A1EB;
+    width: 387px;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    left: calc(50% - 387px/2 - 0.5px);
+    top: 816px;
+    border-radius: 8px;
+}
+.List-Txt {
+    margin: auto;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;    
+}
+    
