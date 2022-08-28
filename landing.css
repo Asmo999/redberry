@@ -1,6 +1,3 @@
-body {
-    margin-top: 79px;
-}
 .container {
 	max-width: 1180px;
 	width: 100%;
@@ -19,6 +16,7 @@ body {
     margin: auto;
 }
 .landing-logo {
+    margin-top: 79px;
     margin-bottom: 85px;
 }
 .landing-photo {
