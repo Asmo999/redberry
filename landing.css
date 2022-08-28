@@ -1,53 +1,36 @@
-.Landing-Photo {
-    position: absolute;
-    top: 182px;
-    left: 589px;
+.container {
+	max-width: 1180px;
+	width: 100%;
+	margin: 0 auto;
 }
-.Landing-Logo {
-    position: absolute;
-    left: calc(50% - 112px/2);
-    top: 79px;
+.block-margin {
+    display: block;
+    margin: auto;
 }
-.Add-Button {
+.button-dis {
     display: flex;
-    position: absolute;
-    background: #62A1EB;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 146px;
+    width: 387px;
+    margin: auto;
+}
+.landing-logo {
+    margin-bottom: 85px;
+}
+.landing-photo {
+    margin-bottom: 123px;
+}
+.lan-button {
     width: 387px;
     height: 60px;
-    justify-content: space-between;
-    align-items: center;
-    left: calc(50% - 387px/2 - 0.5px);
-    top: 730px;
-    border-radius: 8px;
-}
-.Add-But-Txt {
-    margin: auto;
+    background-color: #62A1EB;
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    color: #FFFFFF;    
-}
-.List-Button {
-    display: flex;
-    position: absolute;
-    background: #62A1EB;
-    width: 387px;
-    height: 60px;
-    justify-content: space-between;
-    align-items: center;
-    left: calc(50% - 387px/2 - 0.5px);
-    top: 816px;
+    color: white;
+    border: none;
     border-radius: 8px;
 }
-.List-Txt {
-    margin: auto;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: #FFFFFF;    
-}
-    
