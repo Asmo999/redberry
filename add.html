@@ -8,12 +8,64 @@
     <link rel="stylesheet" href="landing.css">
     <title>Redberry</title>
 </head>
-<body>
-    <header class="container">
-        <div class="St-Add">
-            <div class="St-Div">თანამშორმლის ინფო</div>
-            <div class="St-Div">ლეპტოპის მახასიათებლები</div>
+<body class="j-col">
+    <header class="container cont-marg">
+        <div class="st-add">
+            <div class="st-div">თანამშორმლის ინფო</div>
+            <a class="st-div-s" href="landing.html">ლეპტოპის მახასიათებლები</a>
+            <!-- <div class="St-Div">ლეპტოპის მახასიათებლები</div> -->
         </div>
     </header>
+    <section class="container-a">
+        <div class="container-b">
+            <form action="#">
+                <div class="user-details">
+                    <div class="st-form">
+                        <div class="input-box">
+                            <span class="details">სახელი </span>
+                            <input placeholder="გრიშა" class="inp-dev" type="text" required>
+                            <span class="s-det">მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">გვარი </span>
+                            <input placeholder="ბაგრატიონი" class="inp-dev" type="text" required>
+                            <span class="s-det">მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
+                        </div>
+                    </div>
+                    <div class="input-box-s">
+                        <select class="sel-dev details ">
+                            <option value="none" selected disabled hidden>თიმი</option>
+                            <option value="saab">დეველოპმენტი</option>
+                            <option value="saab">გაყიდვები</option>
+                            <option value="opel">დიზაინი</option>
+                            <option value="audi">მარკეტინგი</option>
+                          </select>
+                    </div>
+                    <div class="input-box-s">
+                        <select class="sel-dev details">
+                            <option value="none" selected disabled hidden>პოზიცია</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                          </select>
+                    </div>
+                    <div class="input-box-l">
+                        <span class="details">მეილი</span>
+                        <input placeholder="grish666@redberry.ge" class="inp-dev-l" type="text" required>
+                        <span class="s-det">უნდა მთავრდებოდეს @redberry.ge-ით</span>
+                    </div>
+                    <div class="input-box-l">
+                        <span class="details">ტელეფონის ნომერი</span>
+                        <input placeholder="+995 598 00 07 01 " class="inp-dev-l" type="text" required>
+                        <span class="s-det">უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</span>
+                    </div>
+                </div>
+                <div class="button-a">
+                    <input class="sub-a" type="submit" value="შემდეგ">
+                </div>
+              </form>
+        </div>
+          
+    </section>
 </body>
 </html>
