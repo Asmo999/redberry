@@ -47,12 +47,10 @@ function callback() {
     inp2.value.slice(inp2.value.indexOf("@")) !== "@redberry.ge" ||
     inp2.value.length < 13
   ) {
-    console.log(inp2.value.length);
     detsp3.style.color = "#E52F2F";
     obj2.style.color = "#E52F2F";
     inp2.style.borderColor = "#E52F2F";
   } else {
-    console.log(inp2.value.length);
     detsp3.style.color = "#2E2E2E";
     obj2.style.color = "black";
     inp2.style.borderColor = "#8AC0E2";
