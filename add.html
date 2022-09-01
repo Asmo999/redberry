@@ -1,71 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="landing.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="landing.css" />
     <title>Redberry</title>
-</head>
-<body class="j-col">
+  </head>
+  <body class="j-col">
     <header class="container cont-marg">
-        <div class="st-add">
-            <div class="st-div">თანამშორმლის ინფო</div>
-            <a class="st-div-s" href="landing.html">ლეპტოპის მახასიათებლები</a>
-            <!-- <div class="St-Div">ლეპტოპის მახასიათებლები</div> -->
-        </div>
+      <div class="st-add flex-jus">
+        <div class="st-div">თანამშორმლის ინფო</div>
+        <a class="st-div-s" href="landing.html">ლეპტოპის მახასიათებლები</a>
+      </div>
     </header>
-    <section class="container-a">
-        <div class="container-b">
-            <form action="#">
-                <div class="user-details">
-                    <div class="st-form">
-                        <div class="input-box">
-                            <span class="details">სახელი </span>
-                            <input placeholder="გრიშა" class="inp-dev" type="text" required>
-                            <span class="s-det">მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
-                        </div>
-                        <div class="input-box">
-                            <span class="details">გვარი </span>
-                            <input placeholder="ბაგრატიონი" class="inp-dev" type="text" required>
-                            <span class="s-det">მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
-                        </div>
-                    </div>
-                    <div class="input-box-s">
-                        <select class="sel-dev details ">
-                            <option value="none" selected disabled hidden>თიმი</option>
-                            <option value="saab">დეველოპმენტი</option>
-                            <option value="saab">გაყიდვები</option>
-                            <option value="opel">დიზაინი</option>
-                            <option value="audi">მარკეტინგი</option>
-                          </select>
-                    </div>
-                    <div class="input-box-s">
-                        <select class="sel-dev details">
-                            <option value="none" selected disabled hidden>პოზიცია</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
-                          </select>
-                    </div>
-                    <div class="input-box-l">
-                        <span class="details">მეილი</span>
-                        <input placeholder="grish666@redberry.ge" class="inp-dev-l" type="text" required>
-                        <span class="s-det">უნდა მთავრდებოდეს @redberry.ge-ით</span>
-                    </div>
-                    <div class="input-box-l">
-                        <span class="details">ტელეფონის ნომერი</span>
-                        <input placeholder="+995 598 00 07 01 " class="inp-dev-l" type="text" required>
-                        <span class="s-det">უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</span>
-                    </div>
-                </div>
-                <div class="button-a">
-                    <input class="sub-a" type="submit" value="შემდეგ">
-                </div>
-              </form>
+    <section class="container-b">
+      <form id="form" action="#">
+        <div class="user-details">
+          <div class="st-form flex-jus">
+            <div class="input-box">
+              <span id="det-1" class="details">სახელი </span>
+              <input id="det-1-in" placeholder="გრიშა" class="inp-dev" type="text"/>
+              <span id="det-1-sp" class="s-det">მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
+            </div>
+            <div class="input-box">
+              <span id="det-2" class="details">გვარი </span>
+              <input id="det-2-in"
+                placeholder="ბაგრატიონი"
+                class="inp-dev"
+                type="text"
+              />
+              <span id="det-2-sp" class="s-det">მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
+            </div>
+          </div>
+          <div class="input-box-s">
+            <select class="sel-dev details">
+              <option value="none" selected disabled hidden>თიმი</option>
+              <option value="1">დეველოპმენტი</option>
+              <option value="saab">HR</option>
+              <option value="saab">გაყიდვები</option>
+              <option value="opel">დიზაინი</option>
+              <option value="audi">მარკეტინგი</option>
+            </select>
+          </div>
+          <div class="input-box-s">
+            <select class="sel-dev details">
+              <option class="dadd" value="none" selected disabled hidden>
+                პოზიცია
+              </option>
+            </select>
+          </div>
+          <div class="input-box-l">
+            <span id="inp-dev-l-1" class="details">მეილი</span>
+            <input
+              id="inp-dev-l-in"
+              placeholder="grish666@redberry.ge"
+              class="inp-dev-l"
+              type="text"
+            />
+            <span id="inp-dev-l-sp" class="s-det">უნდა მთავრდებოდეს @redberry.ge-ით</span>
+          </div>
+          <div class="input-box-l">
+            <span id="inp-dev-l1-sp" class="details">ტელეფონის ნომერი</span>
+            <input
+              id="inp-dev-l1-in"
+              placeholder="+995 598 00 07 01 "
+              class="inp-dev-l"
+              type="text"
+            />
+            <span id="inp-dev-l1-1" class="s-det"
+              >უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</span
+            >
+          </div>
         </div>
-          
+        <div class="button-a">
+          <input class="sub-a" type="submit" value="შემდეგ" />
+        </div>
+      </form>
     </section>
-</body>
+    <div class="container bot-marginator">
+        <img class="logo-b" src="images/LOGO_10 2.png" alt="logo-b" />
+    </div>
+    
+  </body>
+  <script src="add.js"></script>
 </html>
