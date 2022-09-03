@@ -11,11 +11,11 @@
   <body class="j-col">
     <header class="container cont-marg">
       <div class="st-add flex-jus">
-        <div class="st-div">თანამშორმლის ინფო</div>
+        <div class="st-div">თანამშრომლის ინფო</div>
         <a class="st-div-s" href="landing.html">ლეპტოპის მახასიათებლები</a>
       </div>
     </header>
-    <section class="container-b">
+    <section class="container-b displayer">
       <form id="form" action="#">
         <div class="user-details">
           <div class="st-form flex-jus">
@@ -79,10 +79,73 @@
         </div>
       </form>
     </section>
-    <div class="container bot-marginator">
-        <img class="logo-b" src="images/LOGO_10 2.png" alt="logo-b" />
-    </div>
-    
+    </section>
+    <section class="container-b">
+      <form id="form-1" action="#">
+        <div>
+          <div id="display-image">
+            <div class="rel-text">ჩააგდე ან ატვირთე ლეპტოპის ფოტო</div>
+            <label for="image-input" class="custom-file">
+              ატვირთე
+            </label>
+            <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg"/>
+          </div>
+        </div>
+        <div class="st-form flex-jus">
+          <div class="input-box">
+            <span id="det-2" class="details">ლეპტოპის სახელი </span>
+            <input id="det-2-in" placeholder="HP" class="inp-dev" type="text"/>
+            <span id="det-2-sp" class="s-det">ლათინური ასოები, ციფრები, !@#$%^&*()_+=</span>
+          </div>
+          <div>
+            <select class="sel-dev-1 details">
+              <option value="none" selected disabled hidden>ლეპტოპის ბრენდი</option>
+            </select>
+          </div>
+        </div>
+        <hr class="line1">
+        <div class="st-form flex-jus">
+          <div>
+            <select class="sel-dev-2 details">
+            <option value="none" selected disabled hidden>CPU</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span id="det-2" class="details">CPU-ს ბირთვი</span>
+            <input id="det-2-in" placeholder="14" class="inp-dev-1" type="text"/>
+            <span id="det-2-sp" class="s-det">მხოლოდ ციფრები</span>
+          </div>
+          <div class="input-box">
+            <span id="det-2" class="details">CPU-ს ნაკადი</span>
+            <input id="det-2-in" placeholder="365" class="inp-dev-1" type="text"/>
+            <span id="det-2-sp" class="s-det">მხოლოდ ციფრები</span>
+          </div>
+        </div>
+        <div class="st-form flex-jus">
+          <div class="input-box">
+            <span id="det-2" class="details">ლეპტოპის RAM (GB)</span>
+            <input id="det-2-in" placeholder="14" class="inp-dev" type="text"/>
+            <span id="det-2-sp" class="s-det">მხოლოდ ციფრები</span>
+          </div>
+          <div class="input-box maincheck-merg">
+            <span id="det-2" class="details det-2-merg">მეხსიერების ტიპი</span>
+            <div class="inliner">
+              <div class="round widther-ch">
+                <input class="check-div checkbox-merg" type="checkbox" checked id="checkbox" />
+                <label class="check-div-l "for="checkbox"></label>
+                <div class="check-text">SSD</div> 
+              </div>
+              <div class="round widther-ch">
+                <input class="check-div checkbox-merg" type="checkbox" checked id="checkbox-1">
+                <label class="check-div-l"for="checkbox-1"></label>
+                <div class="check-text">HDD</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <hr class="line1">
+      </form>
+    </section>
   </body>
   <script src="add.js"></script>
 </html>

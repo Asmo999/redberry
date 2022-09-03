@@ -2,6 +2,8 @@ const inp = document.getElementById("det-1-in");
 const inp1 = document.getElementById("det-2-in");
 const inp2 = document.getElementById("inp-dev-l-in");
 const inp3 = document.getElementById("inp-dev-l1-in");
+const imagein = document.getElementById("image-input")
+let uploaded_image = ""
 const georgian = /^[ა-ჰ]+$/;
 function callback() {
   const obj = document.getElementById("det-1");
@@ -74,3 +76,21 @@ var ele = document.getElementById("form");
 if (ele.addEventListener) {
   ele.addEventListener("submit", callback, false);
 }
+// imagein.addEventListener("change", function() {
+//   const reader = new FileReader();
+//   reader.addEventListener("load", () => {
+//     const uploaded_image = reader.result;
+//     document.getElementById("display-image").style.backgroundImage = `url(${uploaded_image})`
+//     reader.readAsDataURL(this.files[0]);
+//   })
+// })
+const image_input = document.querySelector("#image-input");
+
+image_input.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image = reader.result;
+    document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});

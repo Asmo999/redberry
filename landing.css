@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url(fonts/HelveticaNeue-01.ttf);
+}
 .container {
   max-width: 1024px;
   width: 100%;
@@ -21,7 +25,11 @@
 .j-col {
   background-color: #f6f6f6;
 }
-.lan-button,.st-div,.st-div-s,.sub-a {
+.lan-button,
+.st-div,
+.st-div-s,
+.sub-a,
+.custom-file {
   font-family: "Helvetica Neue";
   font-size: 20px;
   line-height: 24px;
@@ -35,7 +43,7 @@
   height: 146px;
   width: 387px;
   margin: auto;
-  padding-bottom: 35px;
+  margin-bottom: 35px;
 }
 .landing-logo {
   margin-top: 79px;
@@ -60,6 +68,7 @@
   padding-bottom: 15px;
   font-weight: 700;
   position: relative;
+  color: black;
 }
 .st-div-s {
   display: inline-block;
@@ -81,15 +90,28 @@
   left: 10%;
   bottom: 0;
 }
-.inp-dev,.inp-dev-l {
+.inp-dev,
+.inp-dev-l,
+.inp-dev-1 {
   padding: 19px 16px 20px 16px;
   border: 1.8px solid #8ac0e2;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 21px;
   border-radius: 8px;
   outline: none;
   margin: 8px 0;
 }
+.check-text {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 21px;
+}
 .inp-dev {
   width: 371.41px;
+}
+.inp-dev-1 {
+  width: 240px;
 }
 .details {
   color: #000000;
@@ -97,6 +119,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
+  letter-spacing: 0.04em;
 }
 .s-det {
   font-family: "Helvetica Neue";
@@ -105,7 +128,8 @@
   line-height: 21px;
   color: #2e2e2e;
 }
-.input-box,.input-box-l {
+.input-box,
+.input-box-l {
   display: flex;
   flex-direction: column;
 }
@@ -115,12 +139,24 @@
 .input-box-l {
   margin-bottom: 48px;
 }
-.sel-dev {
-  width: 879px;
+.sel-dev,
+.sel-dev-1,
+.sel-dev-2 {
   background: #ebebeb;
   border-radius: 8px;
-  padding: 19px 16px 20px 16px;
   outline: none;
+  padding: 19px 0px 20px 16px;
+}
+.sel-dev {
+  width: 879px;
+}
+.sel-dev-1 {
+  width: 408px;
+  margin-top: 30px;
+}
+.sel-dev-2 {
+  margin-top: 29px;
+  width: 277px;
 }
 .st-form {
   width: 879px;
@@ -154,4 +190,83 @@
 }
 .bot-marginator {
   margin-bottom: 45px;
+}
+#display-image {
+  width: 878px;
+  height: 423px;
+  border: 2px dashed #4386a9;
+  background-position: center;
+  background-size: cover;
+  background-color: #f6f6f6;
+}
+.rel-text {
+  margin: auto;
+  font-family: "Helvetica Neue";
+  width: 195px;
+  color: #4386a9;
+  line-height: 38px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 107px;
+  margin-bottom: 65px;
+}
+#image-input {
+  margin: auto;
+  display: none;
+}
+.displayer {
+  display: none;
+}
+.custom-file {
+  background-color: #62a1eb;
+  width: 90px;
+  padding: 18px 71.5px;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  margin: auto;
+  align-items: center;
+  display: block;
+}
+.line1 {
+  border-top: 1px solid #c7c7c7;
+}
+.round {
+  position: relative;
+}
+.check-div-l {
+  background-color: #1dd1e1;
+  border: 2px solid #4d9ac3;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 16px;
+}
+
+.check-div[type="checkbox"]:checked + label {
+  background-color: #ffffff;
+  border-color: #4d9ac3;
+}
+.inliner {
+  display: flex;
+  width: 220px;
+  justify-content: space-between;
+}
+.widther-ch {
+  width: 40px;
+  display: flex;
+  margin-right: 40px;
+}
+.checkbox-merg {
+  margin-right: 18px;
+}
+.det-2-merg {
+  margin-bottom: 26.5px;
+}
+.maincheck-merg {
+  margin-right: 200px;
 }
