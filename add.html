@@ -74,21 +74,36 @@
             >
           </div>
         </div>
-        <div class="button-a">
-          <input class="sub-a" type="submit" value="შემდეგ" />
-        </div>
+          <div class="button-a">
+            <input class="sub-a" type="submit" value="შემდეგ" />
+          </div>
       </form>
     </section>
     </section>
     <section class="container-b">
       <form id="form-1" action="#">
-        <div>
+        <div class="image-marg">
           <div id="display-image">
+            <img class="vector-1" src="images/Vector_1.png" alt="vectorr1">
             <div class="rel-text">ჩააგდე ან ატვირთე ლეპტოპის ფოტო</div>
             <label for="image-input" class="custom-file">
               ატვირთე
             </label>
             <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg"/>
+          </div>
+        </div>
+        <div class="input-box">
+          <div class="st-form flex-jus cent-align">
+            <div class="flex-jus cent-align">
+              <img class="checkmark-green" src="images/Vector_2.png" alt="">
+              <div class="valuenum"></div>
+              <div class="sizenum"></div>
+            </div>
+              <label for="image-input" class="custom-file automarginer">
+                თავიდან ატვირთე
+              </label>
+              <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg"/>
+
           </div>
         </div>
         <div class="st-form flex-jus">
@@ -143,9 +158,45 @@
             </div>
           </div>
         </div>
-      <hr class="line1">
+        <hr class="line1">
+        <div class="st-form flex-jus">
+          <div class="input-box">
+            <span id="det-2" class="details">შეძენის რიცხვი(არჩევითი) </span>
+            <input id="det-2-in" placeholder="დდ / თთ / წწწწ" class="inp-dev" type="text">
+          </div>
+          <div class="input-box">
+            <span id="det-2" class="details">ლეპტოპის ფასი </span>
+            <div>
+              <img class="vector-rel" src="images/Vector.png" alt="vector">
+              <input type="text" class="inp-dev vector-inp" id="new-chat-window-input" value="0000" />
+            </div>
+            <span id="det-2-sp" class="s-det">მხოლოდ ციფრები</span>
+          </div>
+        </div>
+        <div class="input-box maincheck-merg">
+          <span id="det-2" class="details det-2-merg">ლეპტოპის მდგომარეობა</span>
+          <div class="inliner">
+            <div class="round widther-ch">
+              <input class="check-div checkbox-merg" type="checkbox" checked id="checkbox-3" />
+              <label class="check-div-l "for="checkbox-3"></label>
+              <div class="check-text">SSD</div> 
+            </div>
+            <div class="round widther-ch">
+              <input class="check-div checkbox-merg" type="checkbox" checked id="checkbox-4">
+              <label class="check-div-l"for="checkbox-4"></label>
+              <div class="check-text">HDD</div>
+            </div>
+          </div>
+        </div>
+        <div class="st-form flex-jus back-b-margin">
+          <button class="back-button">
+            <div class="back-div">უკან</div>
+          </button>
+          <button class="lan-button lan-back lan-b-text"> დამახსოვრება</button>
+        </div>
       </form>
     </section>
+    <img class="logo-b" src="images/logo_10.png" alt="logo10">
   </body>
   <script src="add.js"></script>
 </html>

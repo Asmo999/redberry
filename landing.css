@@ -29,10 +29,13 @@
 .st-div,
 .st-div-s,
 .sub-a,
-.custom-file {
+.custom-file , .lan-b-text {
   font-family: "Helvetica Neue";
   font-size: 20px;
   line-height: 24px;
+}
+.lan-b-text {
+  font-weight: 500;
 }
 .block-margin {
   display: block;
@@ -102,10 +105,19 @@
   outline: none;
   margin: 8px 0;
 }
-.check-text {
+.check-text, .back-div {
   font-family: "Helvetica Neue";
   font-size: 16px;
   line-height: 21px;
+}
+.back-div {
+  color: #62A1EB;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+.back-button {
+  background-color: transparent;
+  border: none;
 }
 .inp-dev {
   width: 371.41px;
@@ -113,7 +125,7 @@
 .inp-dev-1 {
   width: 240px;
 }
-.details {
+.details ,.valuenum {
   color: #000000;
   font-family: "Helvetica Neue";
   font-weight: 500;
@@ -121,6 +133,16 @@
   line-height: 21px;
   letter-spacing: 0.04em;
 }
+.sizenum {
+  font-family: "Helvetica Neue";
+  color: #5F5F5F;
+  font-size: 18px;
+  line-height: 21px;
+}
+.valuenum {
+  letter-spacing: normal;
+}
+
 .s-det {
   font-family: "Helvetica Neue";
   font-weight: 300;
@@ -185,8 +207,9 @@
 }
 .logo-b {
   width: 85px;
-  margin: auto;
   display: block;
+  margin: auto;
+  margin-bottom: 52px;
 }
 .bot-marginator {
   margin-bottom: 45px;
@@ -198,6 +221,10 @@
   background-position: center;
   background-size: cover;
   background-color: #f6f6f6;
+  border-radius: 18px;
+}
+.image-marg {
+  margin-bottom: 50px;
 }
 .rel-text {
   margin: auto;
@@ -246,7 +273,6 @@
   top: 0;
   width: 16px;
 }
-
 .check-div[type="checkbox"]:checked + label {
   background-color: #ffffff;
   border-color: #4d9ac3;
@@ -269,4 +295,39 @@
 }
 .maincheck-merg {
   margin-right: 200px;
+}
+.vector-rel {
+  position: absolute;
+  margin-left: 370px;
+  margin-top: 30px;
+}
+.lan-back {
+  width: 219px;
+  padding: 18px 35.5px;
+}
+.back-b-margin {
+  margin-top: 76px;
+}
+.vector-1 {
+  width: 38px;
+  display: block;
+  margin: auto;
+  margin-top: 54px;
+  display: none;
+}
+.checkmark-green {
+  width: 22px;
+  height: 22px;
+  margin-right: 25px;
+}
+.cent-align {
+  align-items: center;
+}
+.automarginer {
+  margin: 0;
+  padding: 18px 24.5px;
+  width: 184px;
+}
+.valuenum {
+  margin-right: 18px;
 }

@@ -2,7 +2,8 @@ const inp = document.getElementById("det-1-in");
 const inp1 = document.getElementById("det-2-in");
 const inp2 = document.getElementById("inp-dev-l-in");
 const inp3 = document.getElementById("inp-dev-l1-in");
-const imagein = document.getElementById("image-input")
+const image_input = document.querySelector("#image-input");
+const iamge_display = document.querySelector("#display-image");
 let uploaded_image = ""
 const georgian = /^[ა-ჰ]+$/;
 function callback() {
@@ -72,20 +73,31 @@ function callback() {
     inp3.style.borderColor = "#8AC0E2";
   }
 }
+function callback1() {
+  var inp = document.getElementById('image-input');
+  const iamge_text = document.querySelector(".rel-text")
+  const iamge_ph = document.querySelector(".vector-1")
+    if(inp.files.length === 0){
+        iamge_ph.style.display = "block"
+        iamge_text.style.marginTop = "19px" 
+        iamge_text.style.color = "#E52F2F"
+        iamge_display.style.backgroundColor = "#FFF1F1"
+        iamge_display.style.borderColor = "#E52F2F"
+        inp.focus();
+        return false;
+    }
+    else {
+      console.log("lasha")
+    }
+}
 var ele = document.getElementById("form");
+var ele1 = document.getElementById("form-1");
 if (ele.addEventListener) {
   ele.addEventListener("submit", callback, false);
 }
-// imagein.addEventListener("change", function() {
-//   const reader = new FileReader();
-//   reader.addEventListener("load", () => {
-//     const uploaded_image = reader.result;
-//     document.getElementById("display-image").style.backgroundImage = `url(${uploaded_image})`
-//     reader.readAsDataURL(this.files[0]);
-//   })
-// })
-const image_input = document.querySelector("#image-input");
-
+if (ele1.addEventListener) {
+  ele1.addEventListener("submit", callback1, false);
+}
 image_input.addEventListener("change", function() {
   const reader = new FileReader();
   reader.addEventListener("load", () => {
@@ -94,3 +106,10 @@ image_input.addEventListener("change", function() {
   });
   reader.readAsDataURL(this.files[0]);
 });
+const iamge_text = document.querySelector(".idkbro")
+const valuenum = document.querySelector(".valuenum")
+const sizenum = document.querySelector(".sizenum")
+image_input.onchange = () => {
+  valuenum.textContent = image_input.value.split("\\").pop() + ","
+  sizenum.textContent = Math.round(image_input.files[0].size /1000) + " mb"
+}
