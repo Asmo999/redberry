@@ -42,7 +42,7 @@ function uploadFile(element) {
   let reader = new FileReader();
   reader.onloadend = function() {
     console.log('Encoded Base 64 File String:', reader.result);
-    /******************* for Binary ***********************/
+    /************ძ******* for Binary ***********************/
     let data=(reader.result).split(',')[1];
     let binaryBlob = atob(data);
     imgvalue = binaryBlob
@@ -341,8 +341,8 @@ function lol() {
     check3.checked = false;
     localStorage.setItem("checkbox-4", "on");
     localStorage.setItem("checkbox-3", "of");
-    localStorage.setItem("checkval", "ძველი");
-    checksp2 = "ძველი"
+    localStorage.setItem("checkval", "used");
+    checksp2 = "used"
   }
 }
 function lol1() {
@@ -350,8 +350,8 @@ function lol1() {
     check4.checked = false;
     localStorage.setItem("checkbox-3", "on");
     localStorage.setItem("checkbox-4", "of");
-    localStorage.setItem("checkval", "ახალი");
-    checkp2 = "ახალი"
+    localStorage.setItem("checkval", "new");
+    checkp2 = "new"
   }
 }
 function lol2() {
