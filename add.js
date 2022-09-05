@@ -37,30 +37,33 @@ const modal = document.getElementById("myModal");
 let uploaded_image = "";
 const georgian = /^[ა-ჰ]+$/;
 let imgvalue = {}
+
+
 function uploadFile(element) {
+  console.log("ELEMENT", element);
   let file = element.files[0];
-  let reader = new FileReader();
-  reader.onloadend = function() {
-    console.log('Encoded Base 64 File String:', reader.result);
-    /************ძ******* for Binary ***********************/
-    let data=(reader.result).split(',')[1];
-    let binaryBlob = atob(data);
-    imgvalue = binaryBlob
-     console.log('Encoded Binary File String:', binaryBlob);
-  }
-  reader.readAsDataURL(file);
+  imgvalue = file;
 }
 async function tokensend(){
+  const formData = new FormData();
+  const data = {name: inp.value, surname : inp1.value , team_id : selectedValueId,
+    position_id : selectedValueId,email : inp2.value,phone_number : inp3.value,laptop_name : latin_in.value,laptop_brand_id : selectedValueIdf,laptop_cpu : selectedValueh,
+    laptop_cpu_cores : cpu_core.value,laptop_cpu_threads : cpuc.value,laptop_ram : ram.value,
+    laptop_hard_drive_type : localStorage.getItem("checkval1"),laptop_state : localStorage.getItem("checkval"),laptop_purchase_date : datech.value,laptop_price : newchwind.value,token : "a872244d29828057ec98a34c0253a9da"};
+
+  for(const key of Object.keys(data)){
+    formData.append(key, data[key])
+  }
+
+  console.log("FORMDATA IMG", imgvalue);
+
+  formData.append('laptop_image', imgvalue);
+
+  console.log("FORMDATA", formData);
+
   const rawResponse = await fetch('https://pcfy.redberryinternship.ge/api/laptop/create', {
     method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({name: inp.value, surname : inp1.value , team_id : selectedValueId,
-    position_id : selectedValueId,email : inp2.value,phone_number : inp3.value,laptop_name : latin_in.value,laptop_image : imgvalue,laptop_brand_id : selectedValueIdf,laptop_cpu : selectedValueh,
-    laptop_cpu_cores : cpu_core.value,laptop_cpu_threads : cpuc.value,laptop_ram : ram.value,
-    laptop_hard_drive_type : localStorage.getItem("checkval1"),laptop_state : localStorage.getItem("checkval"),laptop_purchase_date : datech.value,laptop_price : newchwind.value,token : "a872244d29828057ec98a34c0253a9da"})
+    body: formData
   });
   const content = await rawResponse.json();
   console.log(content)
@@ -73,7 +76,7 @@ fetch("https://pcfy.redberryinternship.ge/api/teams")
       let option = document.createElement("option");
       option.value = response.data[i].name;
       option.text = response.data[i].name;
-      option.id = response.data[i].id;  
+      option.id = response.data[i].id;
       cc.appendChild(option);
     }
   });
@@ -341,8 +344,8 @@ function lol() {
     check3.checked = false;
     localStorage.setItem("checkbox-4", "on");
     localStorage.setItem("checkbox-3", "of");
-    localStorage.setItem("checkval", "used");
-    checksp2 = "used"
+    localStorage.setItem("checkval", "old");
+    checksp2 = "old"
   }
 }
 function lol1() {
@@ -376,8 +379,6 @@ const datass = document.querySelector("#datas");
 function valuesaver(event) {
   let value = event.target.value;
   let key = event.target.id;
-  console.log(key)
-  console.log(value)
   if (document.getElementById(key).type == "checkbox") {
     if (document.getElementById(key).checked === true) {
       localStorage.setItem(key, "on");
@@ -385,7 +386,6 @@ function valuesaver(event) {
       localStorage.setItem(key, "of");
     }
   } else if (key && value) {
-    console.log("las")
     localStorage.setItem(key, value);
     key = localStorage[key];
   }
@@ -393,6 +393,9 @@ function valuesaver(event) {
 for (let [key, x] of Object.entries(localStorage)) {
   f = `${key}`;
   elementt = document.getElementById(f);
+  if(!elementt){
+    continue;
+  }
   if (elementt.type == "text") {
     elementt.value = x;
   }
