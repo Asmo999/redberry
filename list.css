@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url(fonts/HelveticaNeue-01.ttf);
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 53px;
+}
+.container-c {
+  width: 1178px;
+  margin: 0 auto;
+  padding-top: 53px;
+}
+.list-text {
+  color: black;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 21px;
+  margin: auto;
+  width: 250px;
+  margin-bottom: 30px;
+}
+.back-div-b {
+  width: 53px;
+  border-radius: 100%;
+  height: 53px;
+  background-color: #d9d9d9;
+  display: inline-block;
+  margin-right: 870px;
+}
+.back-div-vec {
+  width: 9px;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+}
+.div-lep {
+  width: 472px;
+  border: 1px solid #aed1ea;
+  border-radius: 20px;
+  height: 205px;
+  background-color: #eafaff;
+  padding: 14px 77px 13px 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.cont-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.imgsrr {
+  width: 266px;
+  height: 178px;
+}
+.divv {
+  display: flex;
+  flex-direction: column;
+  padding-top: 45px;
+}
+.div-t-1, .div-t-2 {
+  font-family: "Helvetica Neue";
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+}
+.div-t-1 {
+    font-weight: 500;
+}
+.div-t-3 {
+    color: #4386A9;
+    font-family: 'Helvetica Neue';
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 21px;
+}

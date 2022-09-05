@@ -15,18 +15,18 @@
         <a class="st-div-s" href="landing.html">ლეპტოპის მახასიათებლები</a>
       </div>
     </header>
-    <section class="container-b displayer">
+    <section class="container-b shower">
       <form id="form" action="#">
         <div class="user-details">
           <div class="st-form flex-jus">
             <div class="input-box">
               <span id="det-1" class="details">სახელი </span>
-              <input id="det-1-in" placeholder="გრიშა" class="inp-dev" type="text"/>
-              <span id="det-1-sp" class="s-det">მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
+              <input onchange="valuesaver(event)" id="det-1-in" placeholder="გრიშა" class="inp-dev" type="text"/>
+              <span id="det-1-sp" value="" class="s-det">მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
             </div>
             <div class="input-box">
               <span id="det-2" class="details">გვარი </span>
-              <input id="det-2-in"
+              <input id="det-2-in" onchange="valuesaver(event)"
                 placeholder="ბაგრატიონი"
                 class="inp-dev"
                 type="text"
@@ -35,17 +35,17 @@
             </div>
           </div>
           <div class="input-box-s">
-            <select class="sel-dev details">
+            <select onchange="valuesaver(event)" id="select-op"class="sel-dev details">
               <option value="none" selected disabled hidden>თიმი</option>
-              <option value="1">დეველოპმენტი</option>
+              <!-- <option value="1">დეველოპმენტი</option>
               <option value="saab">HR</option>
               <option value="saab">გაყიდვები</option>
               <option value="opel">დიზაინი</option>
-              <option value="audi">მარკეტინგი</option>
+              <option value="audi">მარკეტინგი</option> -->
             </select>
           </div>
           <div class="input-box-s">
-            <select class="sel-dev details">
+            <select id="select-op-4" class="sel-dev details">
               <option class="dadd" value="none" selected disabled hidden>
                 პოზიცია
               </option>
@@ -54,6 +54,7 @@
           <div class="input-box-l">
             <span id="inp-dev-l-1" class="details">მეილი</span>
             <input
+              onchange="valuesaver(event)"
               id="inp-dev-l-in"
               placeholder="grish666@redberry.ge"
               class="inp-dev-l"
@@ -64,6 +65,7 @@
           <div class="input-box-l">
             <span id="inp-dev-l1-sp" class="details">ტელეფონის ნომერი</span>
             <input
+              onchange="valuesaver(event)"
               id="inp-dev-l1-in"
               placeholder="+995 598 00 07 01 "
               class="inp-dev-l"
@@ -74,46 +76,46 @@
             >
           </div>
         </div>
-          <div class="button-a">
-            <input class="sub-a" type="submit" value="შემდეგ" />
-          </div>
+        <div class="f-end">
+          <input id="back-b" onclick="callback()" class="sub-a" type="submit" value="შემდეგ" />
+        </div>
       </form>
     </section>
     </section>
     <section class="container-b">
       <form id="form-1" action="#">
-        <div class="image-marg">
+        <div id="imagePreview" class="image-marg">
           <div id="display-image">
             <img class="vector-1" src="images/Vector_1.png" alt="vectorr1">
             <div class="rel-text">ჩააგდე ან ატვირთე ლეპტოპის ფოტო</div>
+            <!-- <img id="imagePreview" src="" alt="xx"> -->
             <label for="image-input" class="custom-file">
               ატვირთე
             </label>
-            <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg"/>
+            <input onchange="valuesaver(event)" type="file" id="image-input" accept="image/jpeg, image/png, image/jpg"/>
           </div>
         </div>
-        <div class="input-box">
-          <div class="st-form flex-jus cent-align">
-            <div class="flex-jus cent-align">
-              <img class="checkmark-green" src="images/Vector_2.png" alt="">
-              <div class="valuenum"></div>
-              <div class="sizenum"></div>
-            </div>
-              <label for="image-input" class="custom-file automarginer">
+        <div id="check-show" class="input-box displayer">
+            <div class="st-form flex-jus cent-align">
+              <div class="flex-jus cent-align">
+                <img class="checkmark-green" src="images/Vector_2.png" alt="">
+                <div class="valuenum"></div>
+                <div class="sizenum"></div>
+              </div>
+              <label onclick="ban()" for="image-input" class="custom-file automarginer">
                 თავიდან ატვირთე
               </label>
-              <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg"/>
-
-          </div>
+              <input onchange="valuesaver(event)" type="file" id="image-input" accept="image/jpeg, image/png, image/jpg"/>
+            </div>
         </div>
         <div class="st-form flex-jus">
           <div class="input-box">
-            <span id="det-2" class="details">ლეპტოპის სახელი </span>
-            <input id="det-2-in" placeholder="HP" class="inp-dev" type="text"/>
-            <span id="det-2-sp" class="s-det">ლათინური ასოები, ციფრები, !@#$%^&*()_+=</span>
+            <span id="det-2-1" class="details">ლეპტოპის სახელი </span>
+            <input onchange="valuesaver(event)" id="det-2-in-1" placeholder="HP" class="inp-dev" type="text"/>
+            <span id="det-2-sp-1" class="s-det">ლათინური ასოები, ციფრები, !@#$%^&*()_+=</span>
           </div>
           <div>
-            <select class="sel-dev-1 details">
+            <select id="select-op-2"class="sel-dev-1 details">
               <option value="none" selected disabled hidden>ლეპტოპის ბრენდი</option>
             </select>
           </div>
@@ -121,37 +123,40 @@
         <hr class="line1">
         <div class="st-form flex-jus">
           <div>
-            <select class="sel-dev-2 details">
+            <select id="select-op-3" class="sel-dev-2 details">
             <option value="none" selected disabled hidden>CPU</option>
             </select>
           </div>
           <div class="input-box">
-            <span id="det-2" class="details">CPU-ს ბირთვი</span>
-            <input id="det-2-in" placeholder="14" class="inp-dev-1" type="text"/>
-            <span id="det-2-sp" class="s-det">მხოლოდ ციფრები</span>
+            <span id="det-2-3" class="details">CPU-ს ბირთვი</span>
+            <input onchange="valuesaver(event)" id="det-2-in-3" placeholder="14" class="inp-dev-1" type="text"/>
+            <span id="det-2-sp-3" class="s-det">მხოლოდ ციფრები</span>
           </div>
           <div class="input-box">
-            <span id="det-2" class="details">CPU-ს ნაკადი</span>
-            <input id="det-2-in" placeholder="365" class="inp-dev-1" type="text"/>
-            <span id="det-2-sp" class="s-det">მხოლოდ ციფრები</span>
+            <span id="det-2-2" class="details">CPU-ს ნაკადი</span>
+            <input onchange="valuesaver(event)" id="det-2-in-2" placeholder="365" class="inp-dev-1" type="text"/>
+            <span id="det-2-sp-2" class="s-det">მხოლოდ ციფრები</span>
           </div>
         </div>
         <div class="st-form flex-jus">
           <div class="input-box">
-            <span id="det-2" class="details">ლეპტოპის RAM (GB)</span>
-            <input id="det-2-in" placeholder="14" class="inp-dev" type="text"/>
-            <span id="det-2-sp" class="s-det">მხოლოდ ციფრები</span>
+            <span id="det-2-4" class="details">ლეპტოპის RAM (GB)</span>
+            <input onchange="valuesaver(event)" id="det-2-in-4" placeholder="16" class="inp-dev" type="text"/>
+            <span id="det-2-sp-4" class="s-det">მხოლოდ ციფრები</span>
           </div>
           <div class="input-box maincheck-merg">
-            <span id="det-2" class="details det-2-merg">მეხსიერების ტიპი</span>
+            <div class="det-2-merg">
+              <span id="det-2-c" class="details">მეხსიერების ტიპი</span>
+              <img class="vector-2" src="images/Vector_1.png" alt="vectorr1">
+            </div>
             <div class="inliner">
               <div class="round widther-ch">
-                <input class="check-div checkbox-merg" type="checkbox" checked id="checkbox" />
+                <input onclick="lol2()" onchange="valuesaver(event)" class="check-div checkbox-merg" type="checkbox" id="checkbox"/>
                 <label class="check-div-l "for="checkbox"></label>
                 <div class="check-text">SSD</div> 
               </div>
               <div class="round widther-ch">
-                <input class="check-div checkbox-merg" type="checkbox" checked id="checkbox-1">
+                <input onclick="lol3()" onchange="valuesaver(event)" class="check-div checkbox-merg" type="checkbox" id="checkbox-1">
                 <label class="check-div-l"for="checkbox-1"></label>
                 <div class="check-text">HDD</div>
               </div>
@@ -162,41 +167,51 @@
         <div class="st-form flex-jus">
           <div class="input-box">
             <span id="det-2" class="details">შეძენის რიცხვი(არჩევითი) </span>
-            <input id="det-2-in" placeholder="დდ / თთ / წწწწ" class="inp-dev" type="text">
+            <input onchange="valuesaver(event)" id="det-2-in-ch" placeholder="დდ / თთ / წწწწ" class="inp-dev" type="text">
           </div>
           <div class="input-box">
             <span id="det-2" class="details">ლეპტოპის ფასი </span>
             <div>
               <img class="vector-rel" src="images/Vector.png" alt="vector">
-              <input type="text" class="inp-dev vector-inp" id="new-chat-window-input" value="0000" />
+              <input onchange="valuesaver(event)" type="text" class="inp-dev vector-inp" id="new-chat-window-input" value="0000" />
             </div>
             <span id="det-2-sp" class="s-det">მხოლოდ ციფრები</span>
           </div>
         </div>
         <div class="input-box maincheck-merg">
-          <span id="det-2" class="details det-2-merg">ლეპტოპის მდგომარეობა</span>
+          <div class="det-2-merg">
+            <span id="det-2-c-1" class="details">ლეპტოპის მდგომარეობა</span>
+            <img class="vector-3" src="images/Vector_1.png" alt="vectorr3">
+          </div>
           <div class="inliner">
             <div class="round widther-ch">
-              <input class="check-div checkbox-merg" type="checkbox" checked id="checkbox-3" />
+              <input onclick="lol1()" class="check-div checkbox-merg" type="checkbox" id="checkbox-3" />
               <label class="check-div-l "for="checkbox-3"></label>
-              <div class="check-text">SSD</div> 
-            </div>
+              <div class="check-text">ახალი</div> 
+            </div>    
             <div class="round widther-ch">
-              <input class="check-div checkbox-merg" type="checkbox" checked id="checkbox-4">
+              <input onclick="lol()" class="check-div checkbox-merg" type="checkbox" id="checkbox-4">
               <label class="check-div-l"for="checkbox-4"></label>
-              <div class="check-text">HDD</div>
+              <div class="check-text">ძველი</div>
             </div>
           </div>
         </div>
         <div class="st-form flex-jus back-b-margin">
-          <button class="back-button">
+          <button class="back-button" onclick="prev()">
             <div class="back-div">უკან</div>
           </button>
           <button class="lan-button lan-back lan-b-text"> დამახსოვრება</button>
         </div>
       </form>
     </section>
-    <img class="logo-b" src="images/logo_10.png" alt="logo10">
+    <img class="logo-b block-margin" src="images/logo_10.png" alt="logo10">
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <img class="frame block-margin" src="images/Frame.png" alt="frame">
+        <div class="modaldiv">ჩანაწერი დამატებულია!</div>
+        <a href="list.html"><button class="modal-but">სიაში გადაყვანა</button></a>
+        <a class="main-men" href="landing.html">მთავარი</a>
+    </div>
   </body>
   <script src="add.js"></script>
 </html>

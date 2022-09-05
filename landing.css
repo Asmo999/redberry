@@ -29,7 +29,9 @@
 .st-div,
 .st-div-s,
 .sub-a,
-.custom-file , .lan-b-text {
+.custom-file,
+.modal-but,
+.main-men {
   font-family: "Helvetica Neue";
   font-size: 20px;
   line-height: 24px;
@@ -66,14 +68,17 @@
   color: white;
   border: none;
 }
-.st-div {
-  display: inline-block;
-  padding-bottom: 15px;
-  font-weight: 700;
-  position: relative;
-  color: black;
+.main-men {
+  color: #0089A7;
+  width: 88px;
+  display: block;
+  margin: auto;
+  font-weight: 500;
 }
-.st-div-s {
+.st-div {
+  position: relative;
+}
+.st-div-s ,.st-div{
   display: inline-block;
   padding-bottom: 15px;
   font-weight: 700;
@@ -114,10 +119,6 @@
   color: #62A1EB;
   font-weight: 500;
   letter-spacing: 0.08em;
-}
-.back-button {
-  background-color: transparent;
-  border: none;
 }
 .inp-dev {
   width: 371.41px;
@@ -198,17 +199,25 @@
   font-weight: 500;
   border: none;
   margin-left: auto;
+  border-radius: 8px;
+}
+.f-end {
+  display: flex;
+  align-items: flex-end;
+}
+.back-button {
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
 }
 .button-a {
-  display: flex;
+  right: 0;
 }
 .sel-dev option {
   background: white;
 }
 .logo-b {
   width: 85px;
-  display: block;
-  margin: auto;
   margin-bottom: 52px;
 }
 .bot-marginator {
@@ -263,7 +272,7 @@
   position: relative;
 }
 .check-div-l {
-  background-color: #1dd1e1;
+  background-color: #ffffff;
   border: 2px solid #4d9ac3;
   border-radius: 50%;
   cursor: pointer;
@@ -274,8 +283,7 @@
   width: 16px;
 }
 .check-div[type="checkbox"]:checked + label {
-  background-color: #ffffff;
-  border-color: #4d9ac3;
+  background-color: #1dd1e1;
 }
 .inliner {
   display: flex;
@@ -293,6 +301,9 @@
 .det-2-merg {
   margin-bottom: 26.5px;
 }
+#det-2-c , #det-2-c-1 {
+  margin-right: 14px;
+}
 .maincheck-merg {
   margin-right: 200px;
 }
@@ -305,14 +316,29 @@
   width: 219px;
   padding: 18px 35.5px;
 }
+.modal-but {
+  width: 297px;
+  padding: 18px 60px;
+  border-radius: 8px;
+  background-color: #62a1eb;
+  border: none;
+  color: white;
+  font-weight: 500;
+  margin: auto;
+  display: block;
+  margin-bottom: 28px;
+}
 .back-b-margin {
   margin-top: 76px;
 }
 .vector-1 {
   width: 38px;
-  display: block;
   margin: auto;
   margin-top: 54px;
+  display: none;
+}
+.vector-2 , .vector-3{
+  width: 22.11px;
   display: none;
 }
 .checkmark-green {
@@ -330,4 +356,43 @@
 }
 .valuenum {
   margin-right: 18px;
+}
+#myDiv {
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 847px;
+  padding: 34px 0px 44px 0px;
+  align-items: center;
+  border-radius: 8px;
+}
+.frame {
+  width: 230px;
+}
+.modaldiv {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30.52px;
+  margin: auto;
+  font-family: 'Helvetica Neue';
+  width: 299px;
+  margin-bottom: 79px;
 }
