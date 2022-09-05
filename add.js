@@ -37,19 +37,19 @@ const modal = document.getElementById("myModal");
 let uploaded_image = "";
 const georgian = /^[ა-ჰ]+$/;
 let imgvalue = {}
-// function uploadFile(element) {
-//   let file = element.files[0];
-//   let reader = new FileReader();
-//   reader.onloadend = function() {
-//     console.log('Encoded Base 64 File String:', reader.result);
-//     /******************* for Binary ***********************/
-//     let data=(reader.result).split(',')[1];
-//     let binaryBlob = atob(data);
-//     imgvalue = binaryBlob
-//      console.log('Encoded Binary File String:', binaryBlob);
-//   }
-//   reader.readAsDataURL(file);
-// }
+function uploadFile(element) {
+  let file = element.files[0];
+  let reader = new FileReader();
+  reader.onloadend = function() {
+    console.log('Encoded Base 64 File String:', reader.result);
+    /******************* for Binary ***********************/
+    let data=(reader.result).split(',')[1];
+    let binaryBlob = atob(data);
+    imgvalue = binaryBlob
+     console.log('Encoded Binary File String:', binaryBlob);
+  }
+  reader.readAsDataURL(file);
+}
 async function tokensend(){
   const rawResponse = await fetch('https://pcfy.redberryinternship.ge/api/laptop/create', {
     method: 'POST',
@@ -376,6 +376,8 @@ const datass = document.querySelector("#datas");
 function valuesaver(event) {
   let value = event.target.value;
   let key = event.target.id;
+  console.log(key)
+  console.log(value)
   if (document.getElementById(key).type == "checkbox") {
     if (document.getElementById(key).checked === true) {
       localStorage.setItem(key, "on");
@@ -383,6 +385,7 @@ function valuesaver(event) {
       localStorage.setItem(key, "of");
     }
   } else if (key && value) {
+    console.log("las")
     localStorage.setItem(key, value);
     key = localStorage[key];
   }
